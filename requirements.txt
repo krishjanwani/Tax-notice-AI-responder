@@ -1,4 +1,6 @@
 streamlit
 google-genai
 python-dotenv
+python-docx
 pymupdf
+
