@@ -60,12 +60,12 @@ if file and final_key:
 
     if st.button("Generate Professional Draft"):
         try:
-            # Connect to Gemini 1.5 Flash using the 2026 Client
+            # Connect to Gemini 2.5 Flash using the 2026 Client
             client = genai.Client(api_key=final_key)
             
             with st.spinner("Drafting legal response..."):
                 response = client.models.generate_content(
-                    model="gemini-1.5-flash", 
+                    model="gemini-2.5-flash", 
                     contents=f"Act as a senior Chartered Accountant. Draft a formal, professional response to this tax notice: {notice_text}. Use a polite but firm legal tone."
                 )
             
@@ -95,4 +95,5 @@ if file and final_key:
             
 elif not final_key:
     st.warning("System Waiting: Please provide a valid Gemini API Key to proceed.")
+
 
